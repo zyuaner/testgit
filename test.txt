@@ -1,0 +1,46 @@
+﻿
+uyun git地址：https://git.uyunsoft.cn/hornet
+
+前端代码仓库：https://git.uyunsoft.cn/hornet/web.git
+
+git config --global http.sslVerify false
+
+前端开发准备：
+
+0、安装node.js, 访问http://nodejs.cn/下载稳定版安装
+
+1、下载git工具：git小乌龟或者git，安装文件地址： \\10.1.2.252\5.交换文件目录\fangbin
+
+2、安装node淘宝镜像
+	git命令行执行：npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+3、checkout代码，安装依赖包，编译项目，git为例：
+	git命令行执行以下命令：
+	git clone -b develop https://git.uyunsoft.cn/hornet/web.git
+	cd web
+	git submodule update --init --recursive
+	cnpm install
+	cd ns1.0
+	cnpm install
+	cd ..
+	npm run dev
+	
+4、进入web\ns1.0文件夹，双击ubus.cmd，访问127.0.0.1:8080
+
+前端开发：
+	页面主要代码在web\app\src目录下
+	
+json数据在：
+	D:\uyun\web\ns1.0\api\data\hornet\api\v1
+
+	
+在hosts里加一个ip映射
+映射到 ss.uyundev.cn
+前缀随便改
+然后浏览器里先uyundev.cn登录一下
+再访问ss.uyundev.cn:8080	
+
+注意修改文件：
+1、替换processSetField.jsx文件：路径为E:\git\web\app\src\pages\config\model
+2、修改common.jsx文件：路径为E:\git\web\ns1.0\api\controllers	
+
